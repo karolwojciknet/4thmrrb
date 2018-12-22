@@ -1,13 +1,13 @@
 <?php
 if(isset($_POST['submit'])){
-    $to = "testmail";
+    $to = "mrrb4th@outlook.com";
     $from = $_POST['mail'];
     $first_name = $_POST['name'];
     $subject = $_POST['subject'];
-    $message = $first_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message = $first_name . " wrote the following message in contact form:" . "\n\n" . $_POST['message'];
 
     $headers = array("From:" . $from,
-        "Reply-To: testmail",
+        "Reply-To: mrrb4th@outlook.com",
         "X-Mailer: PHP/" . PHP_VERSION
     );
     $headers = implode("\r\n", $headers);
