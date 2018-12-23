@@ -1,7 +1,11 @@
 //Carousel settings
-$('.carousel').carousel({
+$('#home').carousel({
   interval: 3000,
   pause: false
+});
+
+$('#gallerycarousel').carousel({
+  pause: true
 });
 
 //Smooth scroling and hiding hamburger menu after click
@@ -28,4 +32,10 @@ $('a[href^="#"]').on('click', function(e) {
 //Donate tooltip
 $(document).ready(function() {
   $('[data-toggle="tooltipDonate"]').tooltip();
+});
+
+//Gallery
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
 });
